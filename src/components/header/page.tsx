@@ -107,10 +107,6 @@ const Header = () => {
                             />
                         </div>
 
-                        <p className="font-semibold text-[16px] leading-[150%] text-[#202435]">
-                            $0.00
-                        </p>
-
                         <Link href={"/cart"}>
                             <div className="border border-[1px solid #e2e4ec] rounded-[50px] w-[42px] h-[42px] flex items-center justify-center bg-[#fff1ee]">
                                 <img
