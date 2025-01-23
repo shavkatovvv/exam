@@ -55,6 +55,9 @@ const Detail = async ({ params }: { params: { id: string } }) => {
                                             +
                                         </Button>
                                     </div>
+                                    <Button className="px-8 py-2 text-white bg-[#233A95] rounded-[30px] hover:bg-blue-800 transition-colors">
+                                        Add to cart
+                                    </Button>
                                 </div>
                             </div>
                             <Button
