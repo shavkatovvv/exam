@@ -2,6 +2,7 @@ import React from "react";
 import SecureIcon from "../secureIcon/sicon";
 import { Input } from "../ui/input";
 import { SelectDemo } from "../select/page";
+import Link from "next/link";
 
 const Header = () => {
     return (
@@ -110,13 +111,15 @@ const Header = () => {
                             $0.00
                         </p>
 
-                        <div className="border border-[1px solid #e2e4ec] rounded-[50px] w-[42px] h-[42px] flex items-center justify-center bg-[#fff1ee]">
-                            <img
-                                className="w-[18px] h-[18px]"
-                                src="https://i.pinimg.com/474x/a0/52/10/a052107cf5d895e6193ed51c3efa11aa.jpg"
-                                alt="bag"
-                            />
-                        </div>
+                        <Link href={"/cart"}>
+                            <div className="border border-[1px solid #e2e4ec] rounded-[50px] w-[42px] h-[42px] flex items-center justify-center bg-[#fff1ee]">
+                                <img
+                                    className="w-[18px] h-[18px]"
+                                    src="https://i.pinimg.com/474x/a0/52/10/a052107cf5d895e6193ed51c3efa11aa.jpg"
+                                    alt="bag"
+                                />
+                            </div>
+                        </Link>
                     </div>
                 </div>
 

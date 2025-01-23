@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Providers } from "@/app/provider/page";
 import "./globals.css";
 import Header from "@/components/header/page";
 import Footer from "@/components/footer/page";
@@ -21,17 +22,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode;
-}>) {
+}) {
     return (
         <html lang="en">
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <Header />
-                {children}
-                <Footer />
+                <Providers>
+                    <Header />
+                    {children}
+                    <Footer />
+                </Providers>
             </body>
         </html>
     );

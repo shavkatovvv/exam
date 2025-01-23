@@ -1,7 +1,6 @@
 import React from "react";
 
 const Footer = () => {
-    // const play = require("@/assets/play-market.png");
     return (
         <footer className=" bg-[#f7f8fd]">
             <div className="container">
