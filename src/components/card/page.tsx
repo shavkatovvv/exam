@@ -37,7 +37,7 @@ const Card = ({ title, image, price, id }: BestSellerTypes) => {
     return (
         <div className="w-full border m-0  p-0 border-l border-r pl-[8px]">
             <div className="text-center flex justify-center">
-                <Link href={`/product/${id}`}>
+                <Link href={`/detail/${id}`}>
                     <img
                         style={{ textAlign: "center" }}
                         width={177}

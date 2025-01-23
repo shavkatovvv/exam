@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Product {
-    id: number;
+    id: number | string;
     price: number;
     product_price?: number;
     product_count?: number;
@@ -54,7 +54,7 @@ const productReducer = createSlice({
             state,
 
             action: PayloadAction<{
-                id: number;
+                id: number | string;
                 type: "increment" | "decrement";
             }>
         ) => {
@@ -81,7 +81,10 @@ const productReducer = createSlice({
                 0
             );
         },
-        deleteProduct: (state, action: PayloadAction<{ id: number }>) => {
+        deleteProduct: (
+            state,
+            action: PayloadAction<{ id: number | string }>
+        ) => {
             state.product_list = state.product_list.filter(
                 (item) => item.id !== action.payload.id
             );

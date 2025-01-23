@@ -19,15 +19,15 @@ const Cart = () => {
 
     if (!isClient) return null;
 
-    const handleIncrease = (id: number) => {
+    const handleIncrease = (id: number | string) => {
         dispatch(toggleAmount({ id, type: "increment" }));
     };
 
-    const handleDecrease = (id: number) => {
+    const handleDecrease = (id: number | string) => {
         dispatch(toggleAmount({ id, type: "decrement" }));
     };
 
-    const handleDelete = (id: number) => {
+    const handleDelete = (id: number | string) => {
         dispatch(deleteProduct({ id }));
     };
 
